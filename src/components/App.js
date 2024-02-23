@@ -37,7 +37,7 @@ function reducer(state, action) {
         ...state,
         answer: action.payload,
         points:
-          action.payload === question.correctOPtion
+          action.payload === question.correctOption
             ? state.points + question.points
             : state.points,
       };
@@ -50,7 +50,7 @@ function reducer(state, action) {
         ...state,
         status: "finished",
         highscore:
-          state.points > state.highscore ? state.point : state.highscore,
+          state.points > state.highscore ? state.points : state.highscore,
       };
 
     case "restart":
